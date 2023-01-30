@@ -19,7 +19,7 @@ const List = ({ items, onChangeItem, onRemoveItem }) => {
                   onChange={() => onChangeItem(item.id)}
                 />
                 <label htmlFor={item.id}>{item.title}</label>
-                <Tags classNames='?' items='? item.tags ?'/>
+                <Tags className='ml-2' items={item.tags} isDisabled={true}/>
               </div>
               <span
                 className='ui-link pl-2 text-sm'

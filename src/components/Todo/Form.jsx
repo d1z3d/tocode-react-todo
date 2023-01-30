@@ -21,13 +21,20 @@ const Form = ({ onSubmit }) => {
     setTags([])
   }
 
+  const tt = () => {
+    console.log('reset')
+  }
+
   const handleTag = (tag) => {
     let newTags = [...tags]
     if(!newTags.includes(tag))
     {
       newTags = [...tags, tag]
     }
-
+    else {
+      const indexForRemove = newTags.indexOf(tag)
+      newTags.splice(indexForRemove, 1)
+    }
     setTags(newTags)
   }
 
@@ -51,7 +58,7 @@ const Form = ({ onSubmit }) => {
       </div>
 
       {/* подсказка: тег может иметь свойство `active`, где будет сменяться opacity */}
-      <Tags classNames='isInline' onItemClick={handleTag}/>
+      <Tags classNames='isInline' onItemClick={handleTag} onReset={() => {}}/>
     </form>
   )
 }

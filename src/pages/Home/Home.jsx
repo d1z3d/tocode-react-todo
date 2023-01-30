@@ -49,7 +49,7 @@ const HomePage = () => {
       <div className='view-wrapper'>
         {/* sidebar */}
         <div className='view-sidebar'>
-          <Tags className='isVertical' onItemClick='? runMyCoolTasksFilter ?' />
+          <Tags className='isVertical'/>
         </div>
 
         {/* content */}
